@@ -24,9 +24,9 @@ nutrie-react/
     App.js
     App.test.js
     components/
+    index.css
     index.js
     views/
-    
 ```
 # Getting started
 

@@ -18,7 +18,7 @@ Each merge request must be approved by at least **1 developer** in the team.
 * Install [Node 10+](https://nodejs.org/en/download/) 
 * Install the [Expo client app](https://expo.io/) on your iOS or Android phone and connect to the same wireless network as your computer. On Android, use the Expo app to scan the QR code from your terminal to open your project. On iOS, follow on-screen instructions to get a link.
 
-*See [Getting started] for more details. 
+*See [Getting started] for more details.* 
 
 ## Run development server
 From root of repository, run ```npm start```. 

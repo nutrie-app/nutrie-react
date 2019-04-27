@@ -11,7 +11,23 @@ Each merge request must be approved by at least **1 developer** in the team.
 * **master** - Edits to master can only be done by merges from another branch. Protected branch. 
 
 # Structure
-
+``` 
+nutrie-react/
+  README.md
+  node_modules/
+  package.json
+  public/
+    index.html
+    favicon.ico
+  src/
+    App.css
+    App.js
+    App.test.js
+    components/
+    index.js
+    views/
+    
+```
 # Getting started
 
 ## Prerequisites

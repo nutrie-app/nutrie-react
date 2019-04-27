@@ -12,3 +12,5 @@ Each merge request must be approved by at least **1 developer** in the team.
 
 # Structure
 
+# Getting started
+1. Install [Node 10+](https://nodejs.org/en/download/) 

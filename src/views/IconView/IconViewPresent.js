@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import PressableIcon from '../PressableIcon';
+import PressableIcon from './PressableIcon';
 import { Container } from 'native-base';
 import { Grid, Col, Row } from 'react-native-easy-grid';
 import { Ionicons } from '@expo/vector-icons';

@@ -4,6 +4,10 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ScanViewPresent from './ScanViewPresent';
 
 export default class ScanViewContainer extends React.Component {
+  static propTypes = {};
+
+  static defaultProps = {};
+
   constructor(props) {
     super(props);
     this.state = { title: 'Scan something' };

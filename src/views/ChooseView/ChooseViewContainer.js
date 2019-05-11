@@ -2,6 +2,10 @@ import React from 'react';
 import ChooseViewPresent from './ChooseViewPresent';
 
 export default class ChooseViewContainer extends React.Component {
+  static propTypes = {};
+
+  static defaultProps = {};
+
   static navigationOptions = {
     title: 'Pick what you want to avoid',
   };

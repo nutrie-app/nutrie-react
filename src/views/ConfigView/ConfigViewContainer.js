@@ -1,11 +1,16 @@
 import React from 'react';
+import { font } from 'expo';
 import ConfigViewPresent from './ConfigViewPresent';
 
 export default class ConfigViewContainer extends React.Component {
+  static propTypes = {};
+
+  static defaultProps = {};
+
   constructor() {
     super();
     this.state = {
-      isReady: false,
+      sliderValue: 50,
     };
   }
 
@@ -13,21 +18,8 @@ export default class ConfigViewContainer extends React.Component {
     title: 'Configure',
   };
 
-  async componentWillMount() {
-    await Expo.Font.loadAsync({
-      Roboto: require('native-base/Fonts/Roboto.ttf'),
-      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-      Ionicons: require('@expo/vector-icons/fonts/Ionicons.ttf'),
-    });
-    this.setState({ isReady: true });
-  }
-
   render() {
     const { navigate } = this.props.navigation;
-
-    if (!this.state.isReady) {
-      return <Expo.AppLoading />;
-    }
 
     return (
       <ConfigViewPresent
@@ -37,7 +29,17 @@ export default class ConfigViewContainer extends React.Component {
             title: 'Scan',
           })
         }
+        onSliderSlide={this._onSliderSlide}
+        sliderValue={this.state.sliderValue}
       />
     );
   }
+
+  _onSliderSlide = value => {
+    this.setState(() => {
+      return {
+        sliderValue: parseFloat(value),
+      };
+    });
+  };
 }

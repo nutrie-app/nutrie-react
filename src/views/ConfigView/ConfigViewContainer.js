@@ -34,6 +34,7 @@ export default class ConfigViewContainer extends React.Component {
           navigate('Scan', {
             itemId: 2,
             title: 'Scan',
+            sugar: this.state.sliderValue
           })
         }
         onSliderSlide={this._onSliderSlide}

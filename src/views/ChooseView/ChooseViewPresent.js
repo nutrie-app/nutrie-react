@@ -6,7 +6,7 @@ import { Grid, Col, Row } from 'react-native-easy-grid';
 const ChooseViewPresent = props => {
   const { onCardPress } = props;
   return (
-    <Container>
+    <Container style={{backgroundColor: "#FFFFFF"}}>
       <Grid>
         <Row size={1}>
           <Col size={1}>
@@ -23,14 +23,16 @@ const ChooseViewPresent = props => {
           </Col>
           <Col size={1}>
             <Card>
-              <CardItem cardBody>
-                <ImageBackground
-                  source={require('../../../assets/imgs/nuts.jpg')}
-                  style={styles.image}
-                >
-                  <Text style={styles.text}> Nuts </Text>
-                </ImageBackground>
-              </CardItem>
+              <View style={styles.overlay}>
+                <CardItem cardBody>
+                  <ImageBackground
+                    source={require('../../../assets/imgs/nuts.jpg')}
+                    style={styles.image}
+                  >
+                    <Text style={styles.text}> Nuts </Text>
+                  </ImageBackground>
+                </CardItem>
+              </View>
             </Card>
           </Col>
         </Row>

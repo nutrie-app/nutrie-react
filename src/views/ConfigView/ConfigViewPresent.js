@@ -13,14 +13,14 @@ const ConfigViewPresent = props => {
         blurRadius={4}
       >
         <Content>
-          <Grid style={{ alignItems: 'center' }}>
-            <Row size={1} style={{ marginTop: 50 }}>
+          <Grid style={{ alignContent: 'center' }}>
+            <Row size={1} >
               <View>
                 <Text style={styles.text}> I want to eat less than </Text>
                 <Text style={styles.text}> {sliderValue} grams of sugar</Text>
               </View>
             </Row>
-            <Row size={1} style={{ marginTop: 100 }}>
+            <Row size={1}>
               <View style={styles.slider}>
                 <Slider
                   style={{ borderRadius: 50 }}
@@ -34,9 +34,9 @@ const ConfigViewPresent = props => {
                 />
               </View>
             </Row>
-            <Row size={1} style={{ marginTop: 225 }}>
+            <Row size={1} >
               <View style={styles.buttonContainer}>
-                <Button color="#4C4C4C" title="Let's do this!" onPress={onButtonPress} />
+                <Button color="#4C4C4C" title="Let's do this!" onPress={onButtonPress} style={{height: 500}} />
               </View>
             </Row>
           </Grid>
@@ -67,8 +67,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'stretch',
     justifyContent: 'center',
-    fontWeight: 'bold',
-    fontSize: 50,
   },
   image: { flex: 1, resizeMode: 'stretch' },
 });

@@ -13,10 +13,10 @@ const SuggestionViewPresent = props => {
             <Card>
               <CardItem button cardBody>
                 <ImageBackground
-                  source={require('../../../assets/imgs/sugar.jpg')}
+                  source={require('../../../assets/imgs/diet_coke.jpg')}
                   style={styles.image}
                 >
-                  <Text style={styles.text}>Sugar</Text>
+                  <Text style={styles.text}>Coca-Cola light 33cl burk</Text>
                 </ImageBackground>
               </CardItem>
             </Card>
@@ -27,10 +27,10 @@ const SuggestionViewPresent = props => {
             <Card>
               <CardItem button cardBody>
                 <ImageBackground
-                  source={require('../../../assets/imgs/sugar.jpg')}
+                  source={require('../../../assets/imgs/loka.jpg')}
                   style={styles.image}
                 >
-                  <Text style={styles.text}>Sugar</Text>
+                  <Text style={styles.text}>LOKA citron burk 33cl</Text>
                 </ImageBackground>
               </CardItem>
             </Card>
@@ -41,10 +41,10 @@ const SuggestionViewPresent = props => {
             <Card>
               <CardItem button cardBody>
                 <ImageBackground
-                  source={require('../../../assets/imgs/sugar.jpg')}
+                  source={require('../../../assets/imgs/vega.jpg')}
                   style={styles.image}
                 >
-                  <Text style={styles.text}>Sugar</Text>
+                  <Text style={styles.text}>Vega Shoreline APA</Text>
                 </ImageBackground>
               </CardItem>
             </Card>
@@ -57,8 +57,8 @@ const SuggestionViewPresent = props => {
 
 const styles = StyleSheet.create({
   container: {},
-  text: { textAlign: 'center', top: 100, fontSize: 30, color: '#FFFFFF' },
-  image: { height: 300, width: '100%', flex: 1 },
+  text: { textAlign: 'center', top: 100, fontSize: 30, color: '#000000', fontWeight: 'bold' },
+  image: {height: 300, width: null, flex: 1},
 });
 
 export default SuggestionViewPresent;

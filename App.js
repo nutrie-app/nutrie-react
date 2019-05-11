@@ -1,6 +1,6 @@
 import React from 'react';
-import ChooseViewContainer from './src/views/ChooseViewContainer';
-import ScanViewContainer from './src/views/ScanViewContainer';
+import ChooseViewContainer from './src/views/ChooseView/ChooseViewContainer';
+import ScanViewContainer from './src/views/ScanView/ScanViewContainer';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 const MainNavigator = createStackNavigator({

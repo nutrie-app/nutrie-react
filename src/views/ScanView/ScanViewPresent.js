@@ -4,12 +4,15 @@ import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'nativ
 import { StyleSheet, Text, Image } from 'react-native';
 
 const ScanViewPresent = props => {
+  const { title, handleOnButtonPress } = props;
   return (
     <Container>
       <Grid>
         <Row size={10} style={styles.card1}>
           <Text>
-            <Text style={styles.titleText}>{props.title}</Text>
+            <Text onPress={handleOnButtonPress} style={styles.titleText}>
+              {title}
+            </Text>
           </Text>
         </Row>
         <Row size={65} style={styles.card2}>

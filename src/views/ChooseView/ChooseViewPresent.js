@@ -21,7 +21,6 @@ const ChooseViewPresent = props => {
               </CardItem>
             </Card>
           </Col>
-
           <Col size={1}>
             <Card>
               <CardItem cardBody>

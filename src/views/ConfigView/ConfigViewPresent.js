@@ -55,9 +55,6 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   slider: { flex: 1, alignItems: 'stretch', justifyContent: 'center' },
-  sliderTrack: {
-    // thumbTintColor: '#4c4c4c',
-  },
   text: {
     textAlign: 'center',
     fontSize: 60,

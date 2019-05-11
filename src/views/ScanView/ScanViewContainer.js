@@ -18,7 +18,7 @@ export default class ScanViewContainer extends React.Component {
       <MaterialCommunityIcons
         name="barcode-scan"
         size={32}
-        color="4c4c4c"
+        color="#4c4c4c"
         style={{ paddingRight: 10 }}
       />
     ),
@@ -40,7 +40,12 @@ export default class ScanViewContainer extends React.Component {
     return (
       <ScanViewPresent
         title={this.state.title}
-        handleOnButtonPress={this._handleOnButtonPress}
+        handleOnButtonPress={() =>
+          navigate('Suggestions', {
+            itemId: 3,
+            title: 'Suggestions',
+          })
+        }
         handleOnTogglePress={this._handleOnTogglePress}
       />
     );

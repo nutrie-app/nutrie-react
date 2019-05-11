@@ -24,12 +24,14 @@ const ChooseViewPresent = props => {
           <Col size={1}>
             <Card>
               <CardItem cardBody>
+                <View style={styles.overlay}>
                 <ImageBackground
                   source={require('../../../assets/imgs/garlic.jpg')}
-                  style={styles.image}
+                  style={styles.disabledImage}
                 >
                   <Text style={styles.text}> FODMAPs </Text>
                 </ImageBackground>
+                </View>
               </CardItem>
             </Card>
           </Col>
@@ -95,6 +97,16 @@ const styles = StyleSheet.create({
   container: {},
   card: {},
   image: { backgroundColor: 'rgba(255, 255, 255, 0.6)', height: 300, width: null, flex: 1 },
+  disabledImage: {
+    backgroundColor: 'rgb(255, 255, 255)',
+    height: 300,
+    width: null,
+    flex: 1,
+    opacity: 10,
+    tintColor: 'grey',
+  },
+  overlay: {
+    backgroundColor:'rgba(255,0,0,0.5)',
   text: {
     textAlign: 'center',
     top: 100,

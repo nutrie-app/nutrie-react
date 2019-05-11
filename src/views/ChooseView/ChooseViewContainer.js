@@ -3,7 +3,7 @@ import ChooseViewPresent from './ChooseViewPresent';
 
 export default class ChooseViewContainer extends React.Component {
   static navigationOptions = {
-    title: 'Set preferences',
+    title: 'Pick what you want to avoid',
   };
 
   render() {
@@ -12,9 +12,9 @@ export default class ChooseViewContainer extends React.Component {
     return (
       <ChooseViewPresent
         onCardPress={() =>
-          navigate('Scan', {
+          navigate('Config', {
             itemId: 2,
-            title: 'Scan',
+            title: 'Config',
           })
         }
       />

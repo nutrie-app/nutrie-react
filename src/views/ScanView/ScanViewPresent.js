@@ -50,15 +50,4 @@ const styles = StyleSheet.create({
   titleText: {},
 });
 
-class LogoTitle extends React.Component {
-  render() {
-    return (
-      <Image
-        source={require('../../../assets/logo/Nutrie_loggo_vit.svg')}
-        style={{ width: 60, height: 20 }}
-      />
-    );
-  }
-}
-
 export default ScanViewPresent;

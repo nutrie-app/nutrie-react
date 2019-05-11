@@ -1,19 +1,6 @@
 import React from 'react';
-import {
-  Container,
-  Header,
-  Content,
-  Card,
-  CardItem,
-  Thumbnail,
-  Text,
-  Button,
-  Icon,
-  Left,
-  Body,
-  Right,
-} from 'native-base';
-import { ImageBackground, Image, StyleSheet } from 'react-native';
+import { Container, Card, CardItem, Text } from 'native-base';
+import { ImageBackground, StyleSheet } from 'react-native';
 import { Grid, Col, Row } from 'react-native-easy-grid';
 
 const ChooseViewPresent = props => {
@@ -21,10 +8,10 @@ const ChooseViewPresent = props => {
   return (
     <Container>
       <Grid>
-        <Row size={20} style={{ alignItems: 'center', justifyContent: 'center' }}>
+        {/* <Row size={20} style={{ alignItems: 'center', justifyContent: 'center' }}>
           <Text style={styles.card}>What do you want to avoid?</Text>
-        </Row>
-        <Row size={20}>
+        </Row> */}
+        <Row size={1}>
           <Col size={1}>
             <Card>
               <CardItem button cardBody onPress={onCardPress}>
@@ -32,9 +19,7 @@ const ChooseViewPresent = props => {
                   source={require('../../../assets/imgs/sugar.jpg')}
                   style={styles.image}
                 >
-                  <Text adjustsFontSizeToFit numberOfLines={1} style={styles.text}>
-                    Sugar
-                  </Text>
+                  <Text style={styles.text}>Sugar</Text>
                 </ImageBackground>
               </CardItem>
             </Card>
@@ -52,7 +37,7 @@ const ChooseViewPresent = props => {
             </Card>
           </Col>
         </Row>
-        <Row size={20}>
+        <Row size={1}>
           <Col size={1}>
             <Card>
               <CardItem cardBody>
@@ -78,7 +63,7 @@ const ChooseViewPresent = props => {
             </Card>
           </Col>
         </Row>
-        <Row size={20}>
+        <Row size={1}>
           <Col size={1}>
             <Card>
               <CardItem cardBody>
@@ -112,9 +97,8 @@ const ChooseViewPresent = props => {
 const styles = StyleSheet.create({
   container: {},
   card: {},
-  image: { height: 200, width: null, flex: 1 },
+  image: { backgroundColor: 'rgba(255, 255, 255, 0.6)', height: 300, width: null, flex: 1 },
   text: {
-    textAlignVertical: 'center',
     textAlign: 'center',
     fontSize: 30,
     color: '#FFFFFF',

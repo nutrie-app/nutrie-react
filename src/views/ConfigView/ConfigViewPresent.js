@@ -1,19 +1,26 @@
 import React from 'react';
-import { StyleSheet, Slider, View } from 'react-native';
+import {
+  ImageBackground,
+  View,
+  Button,
+  Text,
+  Image,
+  StyleSheet,
+  Slider,
+  Switch,
+} from 'react-native';
 import { Grid, Col, Row } from 'react-native-easy-grid';
-import { Container, Button, Text } from 'native-base';
+import { Container } from 'native-base';
 
 const ConfigViewPresent = props => {
   const { onButtonPress, onSliderSlide, sliderValue } = props;
   return (
-    <Container>
+    <Container style={styles.container}>
       <Grid>
         <Row size={1}>
-          <Text> Let's dodge that sugar! </Text>
-        </Row>
-        <Row size={1}>
           <View style={styles.slider}>
-            <Text> Sugar: {sliderValue} [g] </Text>
+            <Text> I want to eat less than </Text>
+            <Text> {sliderValue} grams </Text>
             <Slider
               style={{ borderRadius: 50 }}
               step={1}
@@ -24,9 +31,9 @@ const ConfigViewPresent = props => {
           </View>
         </Row>
         <Row size={1}>
-          <Button rounded success onPress={onButtonPress} style={styles.button}>
-            <Text style={styles.text}> Let's go! </Text>
-          </Button>
+          <View style={styles.buttonContainer}>
+            <Button title="Let's go!" onPress={onButtonPress} />
+          </View>
         </Row>
       </Grid>
     </Container>
@@ -34,6 +41,10 @@ const ConfigViewPresent = props => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   slider: { flex: 1, alignItems: 'stretch', justifyContent: 'center' },
   text: {
     textAlign: 'center',
@@ -45,6 +56,10 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center',
   },
+  buttonContainer: {
+    margin: 20,
+  },
+  image: { flex: 1, resizeMode: 'cover' },
 });
 
 export default ConfigViewPresent;

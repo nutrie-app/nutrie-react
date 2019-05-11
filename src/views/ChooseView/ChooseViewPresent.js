@@ -8,9 +8,6 @@ const ChooseViewPresent = props => {
   return (
     <Container>
       <Grid>
-        {/* <Row size={20} style={{ alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={styles.card}>What do you want to avoid?</Text>
-        </Row> */}
         <Row size={1}>
           <Col size={1}>
             <Card>
@@ -100,6 +97,7 @@ const styles = StyleSheet.create({
   image: { backgroundColor: 'rgba(255, 255, 255, 0.6)', height: 300, width: null, flex: 1 },
   text: {
     textAlign: 'center',
+    top: 100,
     fontSize: 30,
     color: '#FFFFFF',
   },

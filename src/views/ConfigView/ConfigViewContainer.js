@@ -1,5 +1,5 @@
 import React from 'react';
-import { font } from 'expo';
+import {Image, View } from 'react-native';
 import ConfigViewPresent from './ConfigViewPresent';
 
 export default class ConfigViewContainer extends React.Component {
@@ -16,6 +16,16 @@ export default class ConfigViewContainer extends React.Component {
 
   static navigationOptions = {
     title: 'Configure',
+    headerRight: (
+      <View
+        style={{ paddingRight: 10, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center' }}
+      >
+        <Image
+          source={require('../../../assets/nutrie.png')}
+          style={{ width: 83.25, height: 17 }}
+        />
+      </View>
+    ),
   };
 
   render() {

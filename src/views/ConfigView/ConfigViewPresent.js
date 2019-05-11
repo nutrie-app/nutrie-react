@@ -7,11 +7,16 @@ const ConfigViewPresent = props => {
   const { onButtonPress } = props;
   return (
     <Container>
-      <Row size={1}>
-        <Button rounded success onPress={onButtonPress} style={styles.button}>
-          <Text style={styles.text}> Set your preference </Text>
-        </Button>
-      </Row>
+      <Grid>
+        <Row size={1}>
+          <Text> hej</Text>
+        </Row>
+        <Row size={1}>
+          <Button rounded success onPress={onButtonPress} style={styles.button}>
+            <Text style={styles.text}> Let's go! </Text>
+          </Button>
+        </Row>
+      </Grid>
     </Container>
   );
 };

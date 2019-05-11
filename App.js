@@ -1,9 +1,9 @@
 import React from 'react';
-import ConfigViewContainer from './src/views/ConfigViewContainer';
+import ScanViewContainer from './src/views/ScanViewContainer';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 const MainNavigator = createStackNavigator({
-  Config: {screen: ConfigViewContainer},
+  Scan: {screen: ScanViewContainer},
 });
 
 const App = createAppContainer(MainNavigator);

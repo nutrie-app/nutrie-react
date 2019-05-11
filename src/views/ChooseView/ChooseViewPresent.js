@@ -1,32 +1,71 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {Container} from 'native-base';
-import { Grid, Col, Row} from 'react-native-easy-grid';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Container } from 'native-base';
+import { Grid, Col, Row } from 'react-native-easy-grid';
+import { Ionicons } from '@expo/vector-icons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import PressableIcon from './PressableIcon';
 
 const ChooseViewPresent = () => {
-    return (
-       <Container>
-        <Grid>
-            <Row size={20} style={styles.card1}></Row> 
-            <Row size={80} style={styles.card2}> 
-                <Col size={1} style={{backgroundColor: "#a4a4a4"}}></Row>  
-                <Col size={1} style={{backgroundColor: "#a3a4a1"}}></Col>  
-                <Col size={1} style={{backgroundColor: "#a5a4a2"}}></Col>  
-            </Row>
-        </Grid>
-    </Container> 
-    )}
+  return (
+    <Container>
+      <Grid>
+        <Row size={20} style={{ alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={styles.card1}>Set your diet</Text>
+        </Row>
+        <Row size={20}>
+          <Col size={1}>
+            <PressableIcon iconName="carrot" />
+          </Col>
+          <Col size={1}>
+            <PressableIcon iconName="food-apple" />
+          </Col>
+        </Row>
+        <Row size={20}>
+          <Col size={1}>
+            <PressableIcon iconName="carrot" />
+          </Col>
+          <Col size={1}>
+            <PressableIcon iconName="carrot" />
+          </Col>
+        </Row>
+        <Row size={20}>
+          <Col size={1}>
+            <PressableIcon iconName="carrot" />
+          </Col>
+          <Col size={1}>
+            <PressableIcon iconName="carrot" />
+          </Col>
+        </Row>
+        <Row size={20}>
+          <Col size={1}>
+            <PressableIcon iconName="carrot" />
+          </Col>
+          <Col size={1}>
+            <PressableIcon iconName="carrot" />
+          </Col>
+        </Row>
+      </Grid>
+    </Container>
+  );
+};
 
-    const styles = StyleSheet.create({
-        card1: {
-          backgroundColor: '#e1e1e1'
-        },
-        card2: {
-            backgroundColor: '#000'
-        },
-        card3: {
-          backgroundColor: '#436745'
-        }
-      });
+const styles = StyleSheet.create({
+  card1: {
+    fontSize: 40,
+  },
+  card2: {
+    backgroundColor: '#43eb4c',
+  },
+  card3: {
+    backgroundColor: '#abe843',
+  },
+  card4: {
+    backgroundColor: '#4aff87',
+  },
+  card5: {
+    backgroundColor: '#fcff4a',
+  },
+});
 
 export default ChooseViewPresent;

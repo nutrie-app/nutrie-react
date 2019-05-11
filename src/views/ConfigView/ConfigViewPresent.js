@@ -13,23 +13,26 @@ const ConfigViewPresent = props => {
         blurRadius={4}
       >
         <Content>
-          <Grid>
+          <Grid style={{ alignItems: 'stretch' }}>
             <Row size={1}>
               <View style={styles.slider}>
-                <Text> I want to eat less than </Text>
-                <Text> {sliderValue} grams </Text>
+                <Text style={styles.text}> I want to eat less than </Text>
+                <Text style={styles.text}> {sliderValue} grams of sugar</Text>
                 <Slider
                   style={{ borderRadius: 50 }}
+                  thumbStyle={styles.sliderTrack}
                   step={1}
                   maximumValue={100}
                   onValueChange={onSliderSlide}
                   value={sliderValue}
+                  minimumTrackTintColor="#FFFFFF"
+                  maximumTrackTintColor="#FFFFFF"
                 />
               </View>
             </Row>
             <Row size={1}>
               <View style={styles.buttonContainer}>
-                <Button title="Let's go!" onPress={onButtonPress} />
+                <Button color="#4C4C4C" title="Let's do this!" onPress={onButtonPress} />
               </View>
             </Row>
           </Grid>
@@ -44,19 +47,27 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
+  content: {
+    top: '50%',
+  },
   slider: { flex: 1, alignItems: 'stretch', justifyContent: 'center' },
+  sliderTrack: {
+    // thumbTintColor: '#4c4c4c',
+  },
   text: {
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 60,
+    fontWeight: 'bold',
     color: '#ffffff',
   },
-  button: {
+  buttonContainer: {
+    marginBottom: 20,
+    margin: 20,
     flex: 1,
     alignItems: 'stretch',
     justifyContent: 'center',
-  },
-  buttonContainer: {
-    margin: 20,
+    fontWeight: 'bold',
+    fontSize: 50,
   },
   image: { flex: 1, resizeMode: 'stretch' },
 });

@@ -1,12 +1,9 @@
 import React from 'react';
-import {Image, View } from 'react-native';
+import { Image, View } from 'react-native';
+import { Font } from 'expo';
 import ConfigViewPresent from './ConfigViewPresent';
 
 export default class ConfigViewContainer extends React.Component {
-  static propTypes = {};
-
-  static defaultProps = {};
-
   constructor() {
     super();
     this.state = {
